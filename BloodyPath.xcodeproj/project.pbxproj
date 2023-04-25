@@ -13,6 +13,9 @@
 		28A30F7F29F80A42004C8D68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A30F7D29F80A42004C8D68 /* Main.storyboard */; };
 		28A30F8129F80A44004C8D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28A30F8029F80A44004C8D68 /* Assets.xcassets */; };
 		28A30F8429F80A44004C8D68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A30F8229F80A44004C8D68 /* LaunchScreen.storyboard */; };
+		28A30F8B29F80D4E004C8D68 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30F8A29F80D4E004C8D68 /* Background.swift */; };
+		28A30F8D29F81A21004C8D68 /* Decoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30F8C29F81A21004C8D68 /* Decoration.swift */; };
+		28A30F8F29F830FE004C8D68 /* Smoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30F8E29F830FE004C8D68 /* Smoke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		28A30F7E29F80A42004C8D68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28A30F8029F80A44004C8D68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28A30F8329F80A44004C8D68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		28A30F8A29F80D4E004C8D68 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		28A30F8C29F81A21004C8D68 /* Decoration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoration.swift; sourceTree = "<group>"; };
+		28A30F8E29F830FE004C8D68 /* Smoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smoke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,9 @@
 			children = (
 				28A30F7329F80A42004C8D68 /* AppDelegate.swift */,
 				28A30F7929F80A42004C8D68 /* GameScene.swift */,
+				28A30F8A29F80D4E004C8D68 /* Background.swift */,
+				28A30F8C29F81A21004C8D68 /* Decoration.swift */,
+				28A30F8E29F830FE004C8D68 /* Smoke.swift */,
 				28A30F7B29F80A42004C8D68 /* GameViewController.swift */,
 				28A30F7D29F80A42004C8D68 /* Main.storyboard */,
 				28A30F8029F80A44004C8D68 /* Assets.xcassets */,
@@ -137,8 +146,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				28A30F7A29F80A42004C8D68 /* GameScene.swift in Sources */,
+				28A30F8F29F830FE004C8D68 /* Smoke.swift in Sources */,
+				28A30F8D29F81A21004C8D68 /* Decoration.swift in Sources */,
 				28A30F7C29F80A42004C8D68 /* GameViewController.swift in Sources */,
 				28A30F7429F80A42004C8D68 /* AppDelegate.swift in Sources */,
+				28A30F8B29F80D4E004C8D68 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
