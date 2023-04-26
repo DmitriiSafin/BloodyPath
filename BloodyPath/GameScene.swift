@@ -7,16 +7,21 @@
 
 import SpriteKit
 import GameplayKit
-import CoreMotion
+
 
 class GameScene: SKScene {
     
-    let motionManager = CMMotionManager()
-    var xAcceleration: CGFloat = 0
-    var player: SKSpriteNode!
+    var player: Player!
     
     override func didMove(to view: SKView) {
         
+        configureStartScene()
+        spawnSmoke()
+        spawnDecoration()
+        player.performRun()
+    }
+    
+    fileprivate func configureStartScene() {
         let screenCenterPoint = CGPoint(
             x: self.size.width / 2,
             y: self.size.height / 2)
@@ -25,42 +30,54 @@ class GameScene: SKScene {
         self.addChild(bacground)
         
         let screen = UIScreen.main.bounds
-        for _ in 1...5 {
-            let x: CGFloat = CGFloat(GKRandomSource.sharedRandom()
-                .nextInt(upperBound: Int(screen.size.width)))
-            let y: CGFloat = CGFloat(GKRandomSource.sharedRandom()
-                .nextInt(upperBound: Int(screen.size.height)))
-            
-            let decoration = Decoration.populateDecoration(at: CGPoint(x: x, y: y))
-            self.addChild(decoration)
-            
-            let smoke = Smoke.populateSmoke(at: CGPoint(x: x, y: y))
-            self.addChild(smoke)
-        }
+        
+        let decoration1 = Decoration.populate(at: CGPoint(x: 100, y: 200))
+        self.addChild(decoration1)
+        
+        let decoration2 = Decoration.populate(
+            at: CGPoint(x: self.size.width - 100, y: self.size.height - 200)
+        )
+        self.addChild(decoration2)
         
         player = Player.populate(at: CGPoint(
             x: screen.size.width / 2, y: 100)
         )
         self.addChild(player)
-        
-        motionManager.accelerometerUpdateInterval = 0.2
-        motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { data, error in
-            if let data = data {
-                let acceleration = data.acceleration
-                self.xAcceleration = CGFloat(acceleration.x) * 0.7 + self.xAcceleration * 0.3
-            }
+    }
+    
+    fileprivate func spawnSmoke() {
+        let spawnSmokeWait = SKAction.wait(forDuration: 2)
+        let spawnSmokeAction = SKAction.run {
+            let smoke = Smoke.populate(at: nil)
+            self.addChild(smoke)
         }
+        
+        let spawnSmokeSequence = SKAction.sequence([spawnSmokeWait, spawnSmokeAction])
+        let spawnSmokeForever = SKAction.repeatForever(spawnSmokeSequence)
+        run(spawnSmokeForever)
+    }
+    
+    fileprivate func spawnDecoration() {
+        let spawnDecorationWait = SKAction.wait(forDuration: 1)
+        let spawnDecorationAction = SKAction.run {
+            let decoration = Decoration.populate(at: nil)
+            self.addChild(decoration)
+        }
+        
+        let spawnDecorationSequence = SKAction.sequence([spawnDecorationWait, spawnDecorationAction])
+        let spawnDecorationForever = SKAction.repeatForever(spawnDecorationSequence)
+        run(spawnDecorationForever)
     }
     
     override func didSimulatePhysics() {
         super.didSimulatePhysics()
         
-        player.position.x += xAcceleration * 50
+        player.checkPosition()
         
-        if player.position.x < -70 {
-            player.position.x = self.size.width + 70
-        } else if player.position.x > self.size.width + 70 {
-            player.position.x = -70
+        enumerateChildNodes(withName: "backgroundSprite") { node, stop in
+            if node.position.y < -200 {
+                node.removeFromParent()
+            }
         }
     }
 }

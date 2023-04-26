@@ -8,20 +8,23 @@
 import SpriteKit
 import GameplayKit
 
-final class Smoke: SKSpriteNode {
 
-    static func populateSmoke(at point: CGPoint) -> Smoke {
+final class Smoke: SKSpriteNode, GameBackgroundSpriteableProtocol {
+
+    static func populate(at point: CGPoint?) -> Smoke {
         let smokeName = configureSmokeName()
         let smoke = Smoke(imageNamed: smokeName)
-        smoke.position = point
+        smoke.position = point ?? randomPoint()
         smoke.setScale(0.5)
         smoke.zPosition = 10
-        smoke.run(move(from: point))
+        smoke.name = "backgroundSprite"
+        smoke.anchorPoint = CGPoint(x: 0.5, y: 1.0)
+        smoke.run(move(from: smoke.position))
         return smoke
     }
     
     fileprivate static func configureSmokeName() -> String {
-        let smoke = GKRandomDistribution(lowestValue: 1, highestValue: 2)
+        let smoke = GKRandomDistribution(lowestValue: 1, highestValue: 1)
         let randomNumber = smoke.nextInt()
         let imageName = "s" + "\(randomNumber)"
         return imageName
@@ -30,7 +33,7 @@ final class Smoke: SKSpriteNode {
     fileprivate static func move(from point: CGPoint) -> SKAction {
         let movePoint = CGPoint(x: point.x, y: -200)
         let moveDistance = point.y + 200
-        let movementSpeed: CGFloat = 15.0
+        let movementSpeed: CGFloat = 150.0
         let duration = moveDistance / movementSpeed
         return SKAction.move(to: movePoint, duration: duration)
     }
