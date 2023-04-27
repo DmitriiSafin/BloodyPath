@@ -12,6 +12,7 @@ import GameplayKit
 class GameScene: SKScene {
     
     var player: Player!
+    var scroller: InfiniteScrollingBackground?
     
     override func didMove(to view: SKView) {
         
@@ -22,12 +23,19 @@ class GameScene: SKScene {
     }
     
     fileprivate func configureStartScene() {
-        let screenCenterPoint = CGPoint(
-            x: self.size.width / 2,
-            y: self.size.height / 2)
-        let bacground = Background.populateBackground(at: screenCenterPoint)
-        bacground.size = self.size
-        self.addChild(bacground)
+//        let screenCenterPoint = CGPoint(
+//            x: self.size.width / 2,
+//            y: self.size.height / 2)
+//        let bacground = Background.populateBackground(at: screenCenterPoint)
+//        bacground.size = self.size
+//        self.addChild(bacground)
+        
+        let images = [UIImage(named: "background")!, UIImage(named: "background")!, UIImage(named: "background")!]
+        scroller = InfiniteScrollingBackground(images: images, scene: self, scrollDirection: .bottom, transitionSpeed: 8)
+        scroller?.scene.name = "backgroundSprite"
+        scroller?.scroll()
+        scroller?.zPosition = 1
+        
         
         let screen = UIScreen.main.bounds
         
@@ -75,7 +83,8 @@ class GameScene: SKScene {
         player.checkPosition()
         
         enumerateChildNodes(withName: "backgroundSprite") { node, stop in
-            if node.position.y < -200 {
+            //if node.position.y < -200 {
+            if node.position.y < UIScreen.main.bounds.height - 1000 {
                 node.removeFromParent()
             }
         }
