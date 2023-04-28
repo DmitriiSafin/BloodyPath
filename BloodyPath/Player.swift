@@ -36,7 +36,8 @@ class Player: SKSpriteNode {
     
     func performRun() {
         motionManager.accelerometerUpdateInterval = 0.2
-        motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { data, error in
+        motionManager.startAccelerometerUpdates(to: OperationQueue.current!) {
+            [unowned self] data, error in
             if let data = data {
                 let acceleration = data.acceleration
                 self.xAcceleration = CGFloat(acceleration.x) * 0.7 + self.xAcceleration * 0.3
