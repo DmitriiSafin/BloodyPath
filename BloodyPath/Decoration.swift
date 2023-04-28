@@ -17,7 +17,7 @@ final class Decoration: SKSpriteNode, GameBackgroundSpriteableProtocol {
         decoration.setScale(randomScaleFactor)
         decoration.zPosition = 1
         decoration.anchorPoint = CGPoint(x: 0.5, y: 1.0)
-        decoration.name = "backgroundSprite"
+        decoration.name = "sprite"
         decoration.run(rotateForRandomAngle())
         decoration.run(move(from: decoration.position))
         return decoration
