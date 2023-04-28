@@ -17,7 +17,7 @@ final class Smoke: SKSpriteNode, GameBackgroundSpriteableProtocol {
         smoke.position = point ?? randomPoint()
         smoke.setScale(0.5)
         smoke.zPosition = 10
-        smoke.name = "backgroundSprite"
+        smoke.name = "sprite"
         smoke.anchorPoint = CGPoint(x: 0.5, y: 1.0)
         smoke.run(move(from: smoke.position))
         return smoke
