@@ -25,6 +25,16 @@ class GameScene: SKScene {
         powerUp.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2)
         powerUp.performRotation()
         self.addChild(powerUp)
+        
+        let enemyTextureAtlas = SKTextureAtlas(named: "Enemy_1")
+        SKTextureAtlas.preloadTextureAtlases([enemyTextureAtlas]) {
+            Enemy.textureAtlas = enemyTextureAtlas
+            let enemy = Enemy()
+            enemy.position = CGPoint(x: self.size.width / 2,
+                                     y: self.size.height * 2 / 3)
+            self.addChild(enemy)
+        }
+        
     }
     
     fileprivate func configureStartScene() {
