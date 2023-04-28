@@ -19,6 +19,8 @@
 		28A30F9129F84032004C8D68 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30F9029F84032004C8D68 /* Player.swift */; };
 		28A30F9329F963ED004C8D68 /* GameBackgroundSpriteableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30F9229F963ED004C8D68 /* GameBackgroundSpriteableProtocol.swift */; };
 		28A30F9529FA4386004C8D68 /* InfiniteScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30F9429FA4386004C8D68 /* InfiniteScrollingBackground.swift */; };
+		28A30F9929FBD292004C8D68 /* PowerUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30F9829FBD292004C8D68 /* PowerUp.swift */; };
+		28A30F9B29FBD799004C8D68 /* GreenPowerUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 28A30F9A29FBD798004C8D68 /* GreenPowerUp.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		28A30F9029F84032004C8D68 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		28A30F9229F963ED004C8D68 /* GameBackgroundSpriteableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBackgroundSpriteableProtocol.swift; sourceTree = "<group>"; };
 		28A30F9429FA4386004C8D68 /* InfiniteScrollingBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollingBackground.swift; sourceTree = "<group>"; };
+		28A30F9829FBD292004C8D68 /* PowerUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerUp.swift; sourceTree = "<group>"; };
+		28A30F9A29FBD798004C8D68 /* GreenPowerUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GreenPowerUp.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 				28A30F7329F80A42004C8D68 /* AppDelegate.swift */,
 				28A30F7929F80A42004C8D68 /* GameScene.swift */,
 				28A30F9029F84032004C8D68 /* Player.swift */,
+				28A30F9829FBD292004C8D68 /* PowerUp.swift */,
 				28A30F8A29F80D4E004C8D68 /* Background.swift */,
 				28A30F9429FA4386004C8D68 /* InfiniteScrollingBackground.swift */,
 				28A30F8C29F81A21004C8D68 /* Decoration.swift */,
@@ -78,6 +83,7 @@
 				28A30F7B29F80A42004C8D68 /* GameViewController.swift */,
 				28A30F7D29F80A42004C8D68 /* Main.storyboard */,
 				28A30F8029F80A44004C8D68 /* Assets.xcassets */,
+				28A30F9A29FBD798004C8D68 /* GreenPowerUp.atlas */,
 				28A30F8229F80A44004C8D68 /* LaunchScreen.storyboard */,
 			);
 			path = BloodyPath;
@@ -141,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28A30F9B29FBD799004C8D68 /* GreenPowerUp.atlas in Resources */,
 				28A30F7F29F80A42004C8D68 /* Main.storyboard in Resources */,
 				28A30F8129F80A44004C8D68 /* Assets.xcassets in Resources */,
 				28A30F8429F80A44004C8D68 /* LaunchScreen.storyboard in Resources */,
@@ -162,6 +169,7 @@
 				28A30F9129F84032004C8D68 /* Player.swift in Sources */,
 				28A30F7429F80A42004C8D68 /* AppDelegate.swift in Sources */,
 				28A30F8B29F80D4E004C8D68 /* Background.swift in Sources */,
+				28A30F9929FBD292004C8D68 /* PowerUp.swift in Sources */,
 				28A30F9529FA4386004C8D68 /* InfiniteScrollingBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
