@@ -23,6 +23,7 @@
 		28A30F9B29FBD799004C8D68 /* GreenPowerUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 28A30F9A29FBD798004C8D68 /* GreenPowerUp.atlas */; };
 		28A30F9D29FC1955004C8D68 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30F9C29FC1955004C8D68 /* Enemy.swift */; };
 		28A30F9F29FC293C004C8D68 /* Enemy_1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 28A30F9E29FC293C004C8D68 /* Enemy_1.atlas */; };
+		28A30FA129FCFC3E004C8D68 /* Enemy_2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 28A30FA029FCFC3E004C8D68 /* Enemy_2.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		28A30F9A29FBD798004C8D68 /* GreenPowerUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GreenPowerUp.atlas; sourceTree = "<group>"; };
 		28A30F9C29FC1955004C8D68 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		28A30F9E29FC293C004C8D68 /* Enemy_1.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Enemy_1.atlas; sourceTree = "<group>"; };
+		28A30FA029FCFC3E004C8D68 /* Enemy_2.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Enemy_2.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				28A30F8029F80A44004C8D68 /* Assets.xcassets */,
 				28A30F9A29FBD798004C8D68 /* GreenPowerUp.atlas */,
 				28A30F9E29FC293C004C8D68 /* Enemy_1.atlas */,
+				28A30FA029FCFC3E004C8D68 /* Enemy_2.atlas */,
 				28A30F8229F80A44004C8D68 /* LaunchScreen.storyboard */,
 			);
 			path = BloodyPath;
@@ -156,6 +159,7 @@
 				28A30F9B29FBD799004C8D68 /* GreenPowerUp.atlas in Resources */,
 				28A30F7F29F80A42004C8D68 /* Main.storyboard in Resources */,
 				28A30F8129F80A44004C8D68 /* Assets.xcassets in Resources */,
+				28A30FA129FCFC3E004C8D68 /* Enemy_2.atlas in Resources */,
 				28A30F8429F80A44004C8D68 /* LaunchScreen.storyboard in Resources */,
 				28A30F9F29FC293C004C8D68 /* Enemy_1.atlas in Resources */,
 			);
