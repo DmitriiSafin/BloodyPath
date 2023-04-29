@@ -22,6 +22,13 @@ class Player: SKSpriteNode {
         playerBody.setScale(0.8)
         playerBody.position = point
         playerBody.zPosition = 5
+        
+        playerBody.physicsBody = SKPhysicsBody(texture: playerTexture, alphaThreshold: 0.5, size: playerBody.size)
+        playerBody.physicsBody?.isDynamic = false
+        playerBody.physicsBody?.categoryBitMask = BitMaskCategory.player.rawValue
+        playerBody.physicsBody?.collisionBitMask = BitMaskCategory.enemy.rawValue | BitMaskCategory.powerUp.rawValue
+        playerBody.physicsBody?.contactTestBitMask = BitMaskCategory.enemy.rawValue | BitMaskCategory.powerUp.rawValue
+        
         return playerBody
     }
     

@@ -33,6 +33,7 @@
 		28A30FB029FD27DA004C8D68 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30FAF29FD27DA004C8D68 /* Assets.swift */; };
 		28A30FB229FD2A2F004C8D68 /* Player.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 28A30FB129FD2A2F004C8D68 /* Player.atlas */; };
 		28A30FB429FD2D06004C8D68 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30FB329FD2D06004C8D68 /* MenuScene.swift */; };
+		28A30FB629FD4D2A004C8D68 /* BitMaskCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30FB529FD4D2A004C8D68 /* BitMaskCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		28A30FAF29FD27DA004C8D68 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		28A30FB129FD2A2F004C8D68 /* Player.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Player.atlas; sourceTree = "<group>"; };
 		28A30FB329FD2D06004C8D68 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		28A30FB529FD4D2A004C8D68 /* BitMaskCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMaskCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				28A30F7329F80A42004C8D68 /* AppDelegate.swift */,
-				28A30F7929F80A42004C8D68 /* GameScene.swift */,
 				28A30FB329FD2D06004C8D68 /* MenuScene.swift */,
+				28A30F7929F80A42004C8D68 /* GameScene.swift */,
+				28A30FB529FD4D2A004C8D68 /* BitMaskCategory.swift */,
 				28A30FAF29FD27DA004C8D68 /* Assets.swift */,
 				28A30F9029F84032004C8D68 /* Player.swift */,
 				28A30FAB29FD23EC004C8D68 /* Shot.swift */,
@@ -215,6 +218,7 @@
 				28A30F7A29F80A42004C8D68 /* GameScene.swift in Sources */,
 				28A30FA729FD1C08004C8D68 /* GreenPowerUp.swift in Sources */,
 				28A30F8F29F830FE004C8D68 /* Smoke.swift in Sources */,
+				28A30FB629FD4D2A004C8D68 /* BitMaskCategory.swift in Sources */,
 				28A30F8D29F81A21004C8D68 /* Decoration.swift in Sources */,
 				28A30F7C29F80A42004C8D68 /* GameViewController.swift in Sources */,
 				28A30F9D29FC1955004C8D68 /* Enemy.swift in Sources */,
