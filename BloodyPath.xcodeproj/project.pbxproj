@@ -24,6 +24,9 @@
 		28A30F9D29FC1955004C8D68 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30F9C29FC1955004C8D68 /* Enemy.swift */; };
 		28A30F9F29FC293C004C8D68 /* Enemy_1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 28A30F9E29FC293C004C8D68 /* Enemy_1.atlas */; };
 		28A30FA129FCFC3E004C8D68 /* Enemy_2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 28A30FA029FCFC3E004C8D68 /* Enemy_2.atlas */; };
+		28A30FA329FD1906004C8D68 /* BluePowerUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 28A30FA229FD1906004C8D68 /* BluePowerUp.atlas */; };
+		28A30FA529FD1BEF004C8D68 /* BluePowerUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30FA429FD1BEF004C8D68 /* BluePowerUp.swift */; };
+		28A30FA729FD1C08004C8D68 /* GreenPowerUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30FA629FD1C08004C8D68 /* GreenPowerUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 		28A30F9C29FC1955004C8D68 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		28A30F9E29FC293C004C8D68 /* Enemy_1.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Enemy_1.atlas; sourceTree = "<group>"; };
 		28A30FA029FCFC3E004C8D68 /* Enemy_2.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Enemy_2.atlas; sourceTree = "<group>"; };
+		28A30FA229FD1906004C8D68 /* BluePowerUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = BluePowerUp.atlas; sourceTree = "<group>"; };
+		28A30FA429FD1BEF004C8D68 /* BluePowerUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluePowerUp.swift; sourceTree = "<group>"; };
+		28A30FA629FD1C08004C8D68 /* GreenPowerUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenPowerUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,8 @@
 				28A30F9029F84032004C8D68 /* Player.swift */,
 				28A30F9C29FC1955004C8D68 /* Enemy.swift */,
 				28A30F9829FBD292004C8D68 /* PowerUp.swift */,
+				28A30FA429FD1BEF004C8D68 /* BluePowerUp.swift */,
+				28A30FA629FD1C08004C8D68 /* GreenPowerUp.swift */,
 				28A30F8A29F80D4E004C8D68 /* Background.swift */,
 				28A30F9429FA4386004C8D68 /* InfiniteScrollingBackground.swift */,
 				28A30F8C29F81A21004C8D68 /* Decoration.swift */,
@@ -91,6 +99,7 @@
 				28A30F7D29F80A42004C8D68 /* Main.storyboard */,
 				28A30F8029F80A44004C8D68 /* Assets.xcassets */,
 				28A30F9A29FBD798004C8D68 /* GreenPowerUp.atlas */,
+				28A30FA229FD1906004C8D68 /* BluePowerUp.atlas */,
 				28A30F9E29FC293C004C8D68 /* Enemy_1.atlas */,
 				28A30FA029FCFC3E004C8D68 /* Enemy_2.atlas */,
 				28A30F8229F80A44004C8D68 /* LaunchScreen.storyboard */,
@@ -157,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28A30F9B29FBD799004C8D68 /* GreenPowerUp.atlas in Resources */,
+				28A30FA329FD1906004C8D68 /* BluePowerUp.atlas in Resources */,
 				28A30F7F29F80A42004C8D68 /* Main.storyboard in Resources */,
 				28A30F8129F80A44004C8D68 /* Assets.xcassets in Resources */,
 				28A30FA129FCFC3E004C8D68 /* Enemy_2.atlas in Resources */,
@@ -174,6 +184,7 @@
 			files = (
 				28A30F9329F963ED004C8D68 /* GameBackgroundSpriteableProtocol.swift in Sources */,
 				28A30F7A29F80A42004C8D68 /* GameScene.swift in Sources */,
+				28A30FA729FD1C08004C8D68 /* GreenPowerUp.swift in Sources */,
 				28A30F8F29F830FE004C8D68 /* Smoke.swift in Sources */,
 				28A30F8D29F81A21004C8D68 /* Decoration.swift in Sources */,
 				28A30F7C29F80A42004C8D68 /* GameViewController.swift in Sources */,
@@ -182,6 +193,7 @@
 				28A30F7429F80A42004C8D68 /* AppDelegate.swift in Sources */,
 				28A30F8B29F80D4E004C8D68 /* Background.swift in Sources */,
 				28A30F9929FBD292004C8D68 /* PowerUp.swift in Sources */,
+				28A30FA529FD1BEF004C8D68 /* BluePowerUp.swift in Sources */,
 				28A30F9529FA4386004C8D68 /* InfiniteScrollingBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
