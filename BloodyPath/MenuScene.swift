@@ -10,6 +10,7 @@ import SpriteKit
 class MenuScene: SKScene {
 
     override func didMove(to view: SKView) {
+        Assets.shared.preloadAssets()
         self.backgroundColor = SKColor(red: 0.15, green: 0.15, blue: 0.3, alpha: 1.0)
         let texture = SKTexture(imageNamed: "play")
         let button = SKSpriteNode(texture: texture)

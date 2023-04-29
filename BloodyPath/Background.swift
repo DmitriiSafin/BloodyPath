@@ -15,6 +15,4 @@ class Background: SKSpriteNode {
         background.zPosition = 0
         return background
     }
-    
-    
 }

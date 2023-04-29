@@ -8,13 +8,15 @@
 import SpriteKit
 import GameplayKit
 
-
 class GameScene: SKScene {
     
     var player: Player!
     var scroller: InfiniteScrollingBackground?
     
     override func didMove(to view: SKView) {
+        
+        physicsWorld.contactDelegate = self
+        physicsWorld.gravity = CGVector.zero
         
         configureStartScene()
         spawnSmoke()
@@ -161,5 +163,24 @@ class GameScene: SKScene {
                 node.removeFromParent()
             }
         }
+    }
+}
+
+extension GameScene: SKPhysicsContactDelegate {
+    func didBegin(_ contact: SKPhysicsContact) {
+        
+        let contactCategory: BitMaskCategory = [contact.bodyA.category,
+                                                contact.bodyB.category]
+        
+        switch contactCategory {
+        case [.enemy, .player]: print("enemy vs player")
+        case [.powerUp, .player]: print("powerUp vs player")
+        case [.enemy, .shot]: print("enemy vs shot")
+        default: preconditionFailure("Error")
+        }
+    }
+    
+    func didEnd(_ contact: SKPhysicsContact) {
+        
     }
 }
