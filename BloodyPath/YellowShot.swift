@@ -1,5 +1,5 @@
 //
-//  BluePowerUp.swift
+//  YellowShot.swift
 //  BloodyPath
 //
 //  Created by Дмитрий on 29.04.2023.
@@ -7,10 +7,10 @@
 
 import SpriteKit
 
-class BluePowerUp: PowerUp {
+class YellowShot: Shot {
     
     init() {
-        let textureAtlas = Assets.shared.bluePowerUpAtlas
+        let textureAtlas = Assets.shared.yellowAmmoAtlas
         super.init(textureAtlas: textureAtlas)
     }
     

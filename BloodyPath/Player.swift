@@ -16,7 +16,8 @@ class Player: SKSpriteNode {
                             height: UIScreen.main.bounds.height)
 
     static func populate(at point: CGPoint) -> Player {
-        let playerTexture = SKTexture(imageNamed: "character")
+        let atlas = Assets.shared.playerAtlas
+        let playerTexture = atlas.textureNamed("character")
         let playerBody = Player(texture: playerTexture)
         playerBody.setScale(0.8)
         playerBody.position = point
