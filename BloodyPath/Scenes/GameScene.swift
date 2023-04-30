@@ -10,9 +10,11 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    var player: Player!
-    var scroller: InfiniteScrollingBackground?
-    
+    fileprivate var player: Player!
+    fileprivate let hud = HUD()
+    fileprivate let screenSize = UIScreen.main.bounds.size
+    fileprivate var scroller: InfiniteScrollingBackground?
+
     override func didMove(to view: SKView) {
         
         physicsWorld.contactDelegate = self
@@ -25,6 +27,12 @@ class GameScene: SKScene {
         
         spawnPowerUp()
         spawnEnemies()
+        createHUD()
+    }
+    
+    fileprivate func createHUD() {
+        addChild(hud)
+        hud.configureUI(screenSize: screenSize)
     }
     
     fileprivate func spawnPowerUp() {
