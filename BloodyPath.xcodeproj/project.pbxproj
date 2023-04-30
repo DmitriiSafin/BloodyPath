@@ -35,6 +35,7 @@
 		28A30FB429FD2D06004C8D68 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30FB329FD2D06004C8D68 /* MenuScene.swift */; };
 		28A30FB629FD4D2A004C8D68 /* BitMaskCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30FB529FD4D2A004C8D68 /* BitMaskCategory.swift */; };
 		28A30FC029FEB041004C8D68 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30FBF29FEB041004C8D68 /* HUD.swift */; };
+		28A30FC929FEBE70004C8D68 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30FC829FEBE70004C8D68 /* ButtonNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		28A30FB329FD2D06004C8D68 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		28A30FB529FD4D2A004C8D68 /* BitMaskCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMaskCategory.swift; sourceTree = "<group>"; };
 		28A30FBF29FEB041004C8D68 /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		28A30FC829FEBE70004C8D68 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		28A30FC529FEB307004C8D68 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				28A30FC829FEBE70004C8D68 /* ButtonNode.swift */,
 				28A30FBF29FEB041004C8D68 /* HUD.swift */,
 				28A30F9029F84032004C8D68 /* Player.swift */,
 				28A30FAB29FD23EC004C8D68 /* Shot.swift */,
@@ -273,6 +276,7 @@
 				28A30FB629FD4D2A004C8D68 /* BitMaskCategory.swift in Sources */,
 				28A30F8D29F81A21004C8D68 /* Decoration.swift in Sources */,
 				28A30F7C29F80A42004C8D68 /* GameViewController.swift in Sources */,
+				28A30FC929FEBE70004C8D68 /* ButtonNode.swift in Sources */,
 				28A30F9D29FC1955004C8D68 /* Enemy.swift in Sources */,
 				28A30F9129F84032004C8D68 /* Player.swift in Sources */,
 				28A30F7429F80A42004C8D68 /* AppDelegate.swift in Sources */,
