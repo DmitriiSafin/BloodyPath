@@ -42,14 +42,6 @@ class InfiniteScrollingBackground {
     public let scrollDirection : ScrollDirection
     
     // MARK: Initialization
-    
-    /*
-     Creates an Infinite Scrolling Background for a SKScene.
-     - images: use at least 2 images
-     - scene: your SKScene instance
-     - scrollDirection: use .top, .bottom, .left or .right
-     - transitionSpeed: any value between 0 and 100. The bigger, the faster!
-     */
     init?(images : [UIImage], scene : SKScene, scrollDirection : ScrollDirection, transitionSpeed : Double) {
         
         // handling invalid initializations:
@@ -62,22 +54,16 @@ class InfiniteScrollingBackground {
             return nil
         }
         
-        // initiating attributes:
         let spriteSize = InfiniteScrollingBackground.spriteNodeSize(scrollDirection, images[0].size, scene)
         self.sprites = InfiniteScrollingBackground.createSpriteNodes(from: images, spriteSize)
         self.scene = scene
         self.scrollDirection = scrollDirection
         self.transitionSpeed = transitionSpeed
         
-        // Setup the anchor point for every sprite:
         setSpritesAnchorPoints()
     }
     
     // MARK: Public Methods
-    
-    /**
-     Scrolls the background images indefinitely.
-     */
     public func scroll() {
         switch scrollDirection {
         case .bottom:
@@ -92,10 +78,6 @@ class InfiniteScrollingBackground {
     }
     
     // MARK: Private Methods
-    
-    /**
-     Scrolls the background images to the right.
-     */
     private func scrollToTheRight() {
         let numberOfSprites = sprites.count
         let transitionDuration = self.transitionDuration(transitionSpeed: transitionSpeed)
@@ -109,9 +91,6 @@ class InfiniteScrollingBackground {
         }
     }
     
-    /**
-     Scrolls the background images to the left.
-     */
     private func scrollToTheLeft() {
         let numberOfSprites = sprites.count
         let transitionDuration = self.transitionDuration(transitionSpeed: transitionSpeed)
@@ -125,9 +104,6 @@ class InfiniteScrollingBackground {
         }
     }
     
-    /**
-     Scrolls up the background images.
-     */
     private func scrollUp() {
         let numberOfSprites = sprites.count
         let transitionDuration = self.transitionDuration(transitionSpeed: transitionSpeed)
@@ -141,9 +117,6 @@ class InfiniteScrollingBackground {
         }
     }
     
-    /**
-     Scrolls down the background images.
-     */
     private func scrollDown() {
         let numberOfSprites = sprites.count
         let transitionDuration = self.transitionDuration(transitionSpeed: transitionSpeed)
@@ -157,23 +130,14 @@ class InfiniteScrollingBackground {
         }
     }
     
-    /**
-     Converts the transitionSpeed to the transition duration.
-     */
     private func transitionDuration(transitionSpeed : Double) -> TimeInterval {
         return 50.0/transitionSpeed
     }
     
-    /**
-     Returns the scene size.
-     */
     private func sceneSize() -> CGSize {
         return scene.size
     }
     
-    /**
-     Sets the anchor points of every sprite node to match the scene's anchor point.
-     */
     private func setSpritesAnchorPoints() {
         for sprite in sprites {
             sprite.anchorPoint.x = scene.anchorPoint.x + 0.5
@@ -181,9 +145,6 @@ class InfiniteScrollingBackground {
         }
     }
     
-    /**
-     Returns the size the background sprite node objects.
-     */
     private static func spriteNodeSize(_ direction : ScrollDirection, _ imageSize : CGSize, _ scene : SKScene) -> CGSize {
         var size = CGSize()
         switch direction {
@@ -199,9 +160,6 @@ class InfiniteScrollingBackground {
         return size
     }
     
-    /**
-     Creates every sprite node from a image array.
-     */
     private static func createSpriteNodes(from images : [UIImage], _ size : CGSize) -> [SKSpriteNode] {
         var tempSprites = [SKSpriteNode]()
         for image in images {
@@ -254,10 +212,6 @@ class InfiniteScrollingBackground {
     }
     
     // MARK: Static Private Methods
-    
-    /**
-     Prints an initialization error message.
-     */
     static private func printInitErrorMessage(_ message : String) {
         print("InfiniteScrollingBackground Initialization Error - \(message)")
     }
