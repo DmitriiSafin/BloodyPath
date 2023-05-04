@@ -36,6 +36,8 @@
 		28A30FB629FD4D2A004C8D68 /* BitMaskCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30FB529FD4D2A004C8D68 /* BitMaskCategory.swift */; };
 		28A30FC029FEB041004C8D68 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30FBF29FEB041004C8D68 /* HUD.swift */; };
 		28A30FC929FEBE70004C8D68 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30FC829FEBE70004C8D68 /* ButtonNode.swift */; };
+		28C235A02A037D2300A1B103 /* PauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C2359F2A037D2300A1B103 /* PauseScene.swift */; };
+		28C235A22A0380A300A1B103 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C235A12A0380A300A1B103 /* SceneManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,8 @@
 		28A30FB529FD4D2A004C8D68 /* BitMaskCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMaskCategory.swift; sourceTree = "<group>"; };
 		28A30FBF29FEB041004C8D68 /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		28A30FC829FEBE70004C8D68 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
+		28C2359F2A037D2300A1B103 /* PauseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseScene.swift; sourceTree = "<group>"; };
+		28C235A12A0380A300A1B103 /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,7 @@
 			children = (
 				28A30FB529FD4D2A004C8D68 /* BitMaskCategory.swift */,
 				28A30FAF29FD27DA004C8D68 /* Assets.swift */,
+				28C235A12A0380A300A1B103 /* SceneManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			children = (
 				28A30FB329FD2D06004C8D68 /* MenuScene.swift */,
 				28A30F7929F80A42004C8D68 /* GameScene.swift */,
+				28C2359F2A037D2300A1B103 /* PauseScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -281,7 +287,9 @@
 				28A30F9129F84032004C8D68 /* Player.swift in Sources */,
 				28A30F7429F80A42004C8D68 /* AppDelegate.swift in Sources */,
 				28A30F8B29F80D4E004C8D68 /* Background.swift in Sources */,
+				28C235A02A037D2300A1B103 /* PauseScene.swift in Sources */,
 				28A30FB029FD27DA004C8D68 /* Assets.swift in Sources */,
+				28C235A22A0380A300A1B103 /* SceneManager.swift in Sources */,
 				28A30F9929FBD292004C8D68 /* PowerUp.swift in Sources */,
 				28A30FA529FD1BEF004C8D68 /* BluePowerUp.swift in Sources */,
 				28A30F9529FA4386004C8D68 /* InfiniteScrollingBackground.swift in Sources */,
