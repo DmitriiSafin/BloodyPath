@@ -12,8 +12,13 @@ class ParentScene: SKScene {
     let sceneManager = SceneManager.shared
     var backScene: SKScene?
     
-    func setupBackgtound() {
-        self.backgroundColor = SKColor(red: 0.15, green: 0.15, blue: 0.3, alpha: 1.0)
+    override init(size: CGSize) {
+        super.init(size: size)
+        backgroundColor = SKColor(red: 0.15, green: 0.15, blue: 0.3, alpha: 1.0)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func setHeader(withName name: String?, andBackground backgroundName: String) {

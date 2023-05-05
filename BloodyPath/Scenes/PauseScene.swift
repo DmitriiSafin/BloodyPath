@@ -11,12 +11,10 @@ class PauseScene: ParentScene {
 
     override func didMove(to view: SKView) {
        
-        setupBackgtound()
         setHeader(withName: "pause", andBackground: "header_background")
         
         let titles = ["restart", "options", "resume"]
         setButtons(titles: titles)
-
     }
     
     override func update(_ currentTime: TimeInterval) {

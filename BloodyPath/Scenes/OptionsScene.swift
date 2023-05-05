@@ -11,7 +11,6 @@ class OptionsScene: ParentScene {
     
     override func didMove(to view: SKView) {
         
-        setupBackgtound()
         setHeader(withName: "options", andBackground: "header_background")
         
         let musicButton = ButtonNode(title: nil, backgroundName: "music")

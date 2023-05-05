@@ -14,7 +14,6 @@ class MenuScene: ParentScene {
             Assets.shared.preloadAssets()
             Assets.shared.isLoaded = true
         }
-        setupBackgtound()
         
         setHeader(withName: "Bloode Path", andBackground: "header_background")
         
@@ -41,11 +40,11 @@ class MenuScene: ParentScene {
             self.scene!.view?.presentScene(optionsScene, transition: transition)
             
         } else if node.name == "best" {
-//            let transition = SKTransition.crossFade(withDuration: 1.0)
-//            let optionsScene = OptionsScene(size: self.size)
-//            optionsScene.backScene = self
-//            optionsScene.scaleMode = .aspectFill
-//            self.scene!.view?.presentScene(optionsScene, transition: transition)
+            let transition = SKTransition.crossFade(withDuration: 1.0)
+            let bestScene = BestScene(size: self.size)
+            bestScene.backScene = self
+            bestScene.scaleMode = .aspectFill
+            self.scene!.view?.presentScene(bestScene, transition: transition)
         }
     }
 }
