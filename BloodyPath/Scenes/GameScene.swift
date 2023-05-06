@@ -244,8 +244,17 @@ extension GameScene: SKPhysicsContactDelegate {
             self.run(waitForExplosionAction) {
                 explosion?.removeFromParent()
             }
+            
+            if lives == -1 {
+                let transition = SKTransition.doorsCloseVertical(withDuration: 1)
+                let gameOverScene = GameOverScene(size: self.size)
+                gameOverScene.scaleMode = .aspectFill
+                self.scene?.view?.presentScene(gameOverScene, transition: transition)
+            }
+            
         case [.powerUp, .player]: print("powerUp vs player")
         case [.enemy, .shot]: print("enemy vs shot")
+            hud.score += 1
             contact.bodyA.node?.removeFromParent()
             contact.bodyB.node?.removeFromParent()
             addChild(explosion!)

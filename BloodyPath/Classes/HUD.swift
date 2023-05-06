@@ -10,7 +10,12 @@ import SpriteKit
 class HUD: SKNode {
 
     let scoreBackground = SKSpriteNode(imageNamed: "scores")
-    let scoreLabel = SKLabelNode(text: "10000")
+    let scoreLabel = SKLabelNode(text: "0")
+    var score: Int = 0 {
+        didSet {
+            scoreLabel.text = score.description
+        }
+    }
     let menuButton = SKSpriteNode(imageNamed: "menu")
     let life1 = SKSpriteNode(imageNamed: "life")
     let life2 = SKSpriteNode(imageNamed: "life")
