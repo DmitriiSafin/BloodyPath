@@ -14,6 +14,30 @@ class GameScene: ParentScene {
     fileprivate let hud = HUD()
     fileprivate let screenSize = UIScreen.main.bounds.size
     fileprivate var scroller: InfiniteScrollingBackground?
+    fileprivate var lives = 3 {
+        didSet {
+            switch lives {
+            case 3:
+                hud.life1.isHidden = false
+                hud.life2.isHidden = false
+                hud.life3.isHidden = false
+            case 2:
+                hud.life1.isHidden = false
+                hud.life2.isHidden = false
+                hud.life3.isHidden = true
+            case 1:
+                hud.life1.isHidden = false
+                hud.life2.isHidden = true
+                hud.life3.isHidden = true
+            case 0:
+                hud.life1.isHidden = true
+                hud.life2.isHidden = true
+                hud.life3.isHidden = true
+            default:
+                break
+            }
+        }
+    }
 
     override func didMove(to view: SKView) {
         
@@ -194,13 +218,40 @@ class GameScene: ParentScene {
 extension GameScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         
+        let explosion = SKEmitterNode(fileNamed: "EnemyExplosion")
+        let contactPoint = contact.contactPoint
+        explosion?.position = contactPoint
+        explosion?.zPosition = 6
+        let waitForExplosionAction = SKAction.wait(forDuration: 1)
+        
         let contactCategory: BitMaskCategory = [contact.bodyA.category,
                                                 contact.bodyB.category]
         
         switch contactCategory {
         case [.enemy, .player]: print("enemy vs player")
+            if contact.bodyA.node?.name == "sprite" {
+                if contact.bodyA.node?.parent != nil {
+                    contact.bodyA.node?.removeFromParent()
+                    lives -= 1
+                }
+            } else {
+                if contact.bodyB.node?.parent != nil {
+                    contact.bodyB.node?.removeFromParent()
+                    lives -= 1
+                }
+            }
+            addChild(explosion!)
+            self.run(waitForExplosionAction) {
+                explosion?.removeFromParent()
+            }
         case [.powerUp, .player]: print("powerUp vs player")
         case [.enemy, .shot]: print("enemy vs shot")
+            contact.bodyA.node?.removeFromParent()
+            contact.bodyB.node?.removeFromParent()
+            addChild(explosion!)
+            self.run(waitForExplosionAction) {
+                explosion?.removeFromParent()
+            }
         default: preconditionFailure("Error")
         }
     }
