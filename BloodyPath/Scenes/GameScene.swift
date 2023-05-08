@@ -264,25 +264,30 @@ extension GameScene: SKPhysicsContactDelegate {
             }
             
         case [.powerUp, .player]:
+            
             if contact.bodyA.node?.parent != nil && contact.bodyB.node?.parent != nil {
                 if contact.bodyA.node?.name == "greenPowerUp" {
                     contact.bodyA.node?.removeFromParent()
                     if lives < 3 {
                         lives += 1
                     }
+                    player.catchGreenPowerUp()
                 } else if contact.bodyB.node?.name == "greenPowerUp" {
                     contact.bodyB.node?.removeFromParent()
                     if lives < 3 {
                         lives += 1
                     }
+                    player.catchGreenPowerUp()
                 }
                 
                 if contact.bodyA.node?.name == "bluePowerUp" {
                     contact.bodyA.node?.removeFromParent()
                     hud.score += 100
+                    player.catchBluePowerUp()
                 } else if contact.bodyB.node?.name == "bluePowerUp" {
                     contact.bodyB.node?.removeFromParent()
                     hud.score += 100
+                    player.catchBluePowerUp()
                 }
             }
             

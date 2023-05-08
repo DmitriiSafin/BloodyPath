@@ -52,4 +52,20 @@ class Player: SKSpriteNode {
             }
         }
     }
+    
+    func catchGreenPowerUp() {
+        let colorAction = SKAction.colorize(with: .green, colorBlendFactor: 1, duration: 0.2)
+        let uncolorAction = SKAction.colorize(with: .green, colorBlendFactor: 0, duration: 0.2)
+        let sequenceAction = SKAction.sequence([colorAction, uncolorAction])
+        let repeatAction = SKAction.repeat(sequenceAction, count: 5)
+        self.run(repeatAction)
+    }
+    
+    func catchBluePowerUp() {
+        let colorAction = SKAction.colorize(with: .blue, colorBlendFactor: 1, duration: 0.2)
+        let uncolorAction = SKAction.colorize(with: .blue, colorBlendFactor: 0, duration: 0.2)
+        let sequenceAction = SKAction.sequence([colorAction, uncolorAction])
+        let repeatAction = SKAction.repeat(sequenceAction, count: 5)
+        self.run(repeatAction)
+    }
 }
