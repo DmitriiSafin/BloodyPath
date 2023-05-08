@@ -207,6 +207,18 @@ class GameScene: ParentScene {
             }
         }
         
+        enumerateChildNodes(withName: "greenPowerUp") { node, stop in
+            if node.position.y <= -100 {
+                node.removeFromParent()
+            }
+        }
+        
+        enumerateChildNodes(withName: "bluePowerUp") { node, stop in
+            if node.position.y <= -100 {
+                node.removeFromParent()
+            }
+        }
+        
         enumerateChildNodes(withName: "shotSprite") { node, stop in
             if node.position.y >= self.size.height + 100 {
                 node.removeFromParent()
@@ -216,6 +228,7 @@ class GameScene: ParentScene {
 }
 
 extension GameScene: SKPhysicsContactDelegate {
+    
     func didBegin(_ contact: SKPhysicsContact) {
         
         let explosion = SKEmitterNode(fileNamed: "EnemyExplosion")
@@ -226,9 +239,8 @@ extension GameScene: SKPhysicsContactDelegate {
         
         let contactCategory: BitMaskCategory = [contact.bodyA.category,
                                                 contact.bodyB.category]
-        
         switch contactCategory {
-        case [.enemy, .player]: print("enemy vs player")
+        case [.enemy, .player]:
             if contact.bodyA.node?.name == "sprite" {
                 if contact.bodyA.node?.parent != nil {
                     contact.bodyA.node?.removeFromParent()
@@ -244,10 +256,62 @@ extension GameScene: SKPhysicsContactDelegate {
             self.run(waitForExplosionAction) {
                 explosion?.removeFromParent()
             }
-        case [.powerUp, .player]: print("powerUp vs player")
-        case [.enemy, .shot]: print("enemy vs shot")
-            contact.bodyA.node?.removeFromParent()
-            contact.bodyB.node?.removeFromParent()
+            
+            if lives == -1 {
+                
+                gameSettings.currentScore = hud.score
+                gameSettings.saveScores()
+                let transition = SKTransition.doorsCloseVertical(withDuration: 1)
+                let gameOverScene = GameOverScene(size: self.size)
+                gameOverScene.scaleMode = .aspectFill
+                self.scene?.view?.presentScene(gameOverScene, transition: transition)
+            }
+            
+        case [.powerUp, .player]:
+            
+            if contact.bodyA.node?.parent != nil && contact.bodyB.node?.parent != nil {
+                if contact.bodyA.node?.name == "greenPowerUp" {
+                    contact.bodyA.node?.removeFromParent()
+                    if lives < 3 {
+                        lives += 1
+                    }
+                    player.catchGreenPowerUp()
+                } else if contact.bodyB.node?.name == "greenPowerUp" {
+                    contact.bodyB.node?.removeFromParent()
+                    if lives < 3 {
+                        lives += 1
+                    }
+                    player.catchGreenPowerUp()
+                }
+                
+                if contact.bodyA.node?.name == "bluePowerUp" {
+                    contact.bodyA.node?.removeFromParent()
+                    hud.score += 100
+                    player.catchBluePowerUp()
+                } else if contact.bodyB.node?.name == "bluePowerUp" {
+                    contact.bodyB.node?.removeFromParent()
+                    hud.score += 100
+                    player.catchBluePowerUp()
+                }
+            }
+            
+        case [.enemy, .shot]:
+          //  if contact.bodyA.node?.name == "shotSprite" {
+                if contact.bodyA.node?.parent != nil {
+                    contact.bodyA.node?.removeFromParent()
+                    contact.bodyB.node?.removeFromParent()
+                    hud.score += 1
+                }
+//            } else {
+//                if contact.bodyB.node?.parent != nil {
+//                    contact.bodyB.node?.removeFromParent()
+//                    contact.bodyB.node?.removeFromParent()
+//                    hud.score += 1
+//                }
+//            }
+//            hud.score += 1
+//            contact.bodyA.node?.removeFromParent()
+//            contact.bodyB.node?.removeFromParent()
             addChild(explosion!)
             self.run(waitForExplosionAction) {
                 explosion?.removeFromParent()
