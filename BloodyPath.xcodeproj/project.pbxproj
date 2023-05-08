@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2804F3D42A06A56700E368CD /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2804F3D32A06A56700E368CD /* GameOverScene.swift */; };
+		2804F3E22A09407E00E368CD /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2804F3E12A09407E00E368CD /* GameSettings.swift */; };
 		284AFB332A04FFBB001327EC /* ParentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB322A04FFBB001327EC /* ParentScene.swift */; };
 		284AFB352A050290001327EC /* OptionsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB342A050290001327EC /* OptionsScene.swift */; };
 		284AFB372A050F30001327EC /* BestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB362A050F30001327EC /* BestScene.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		2804F3D32A06A56700E368CD /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		2804F3E12A09407E00E368CD /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		284AFB322A04FFBB001327EC /* ParentScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentScene.swift; sourceTree = "<group>"; };
 		284AFB342A050290001327EC /* OptionsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScene.swift; sourceTree = "<group>"; };
 		284AFB362A050F30001327EC /* BestScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestScene.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				28A30FB529FD4D2A004C8D68 /* BitMaskCategory.swift */,
 				28A30FAF29FD27DA004C8D68 /* Assets.swift */,
 				28C235A12A0380A300A1B103 /* SceneManager.swift */,
+				2804F3E12A09407E00E368CD /* GameSettings.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				2804F3D42A06A56700E368CD /* GameOverScene.swift in Sources */,
 				28A30F8D29F81A21004C8D68 /* Decoration.swift in Sources */,
 				28A30F7C29F80A42004C8D68 /* GameViewController.swift in Sources */,
+				2804F3E22A09407E00E368CD /* GameSettings.swift in Sources */,
 				28A30FC929FEBE70004C8D68 /* ButtonNode.swift in Sources */,
 				28A30F9D29FC1955004C8D68 /* Enemy.swift in Sources */,
 				28A30F9129F84032004C8D68 /* Player.swift in Sources */,

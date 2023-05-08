@@ -228,6 +228,7 @@ class GameScene: ParentScene {
 }
 
 extension GameScene: SKPhysicsContactDelegate {
+    
     func didBegin(_ contact: SKPhysicsContact) {
         
         let explosion = SKEmitterNode(fileNamed: "EnemyExplosion")
@@ -257,6 +258,9 @@ extension GameScene: SKPhysicsContactDelegate {
             }
             
             if lives == -1 {
+                
+                gameSettings.currentScore = hud.score
+                gameSettings.saveScores()
                 let transition = SKTransition.doorsCloseVertical(withDuration: 1)
                 let gameOverScene = GameOverScene(size: self.size)
                 gameOverScene.scaleMode = .aspectFill

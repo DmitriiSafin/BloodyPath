@@ -11,6 +11,7 @@ class ParentScene: SKScene {
 
     let sceneManager = SceneManager.shared
     var backScene: SKScene?
+    let gameSettings = GameSettings()
     
     override init(size: CGSize) {
         super.init(size: size)
