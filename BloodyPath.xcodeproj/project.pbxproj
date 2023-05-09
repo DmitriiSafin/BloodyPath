@@ -20,7 +20,6 @@
 		28A30F7F29F80A42004C8D68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A30F7D29F80A42004C8D68 /* Main.storyboard */; };
 		28A30F8129F80A44004C8D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28A30F8029F80A44004C8D68 /* Assets.xcassets */; };
 		28A30F8429F80A44004C8D68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A30F8229F80A44004C8D68 /* LaunchScreen.storyboard */; };
-		28A30F8B29F80D4E004C8D68 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30F8A29F80D4E004C8D68 /* Background.swift */; };
 		28A30F8D29F81A21004C8D68 /* Decoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30F8C29F81A21004C8D68 /* Decoration.swift */; };
 		28A30F8F29F830FE004C8D68 /* Smoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30F8E29F830FE004C8D68 /* Smoke.swift */; };
 		28A30F9129F84032004C8D68 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A30F9029F84032004C8D68 /* Player.swift */; };
@@ -62,7 +61,6 @@
 		28A30F7E29F80A42004C8D68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28A30F8029F80A44004C8D68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28A30F8329F80A44004C8D68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		28A30F8A29F80D4E004C8D68 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		28A30F8C29F81A21004C8D68 /* Decoration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoration.swift; sourceTree = "<group>"; };
 		28A30F8E29F830FE004C8D68 /* Smoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smoke.swift; sourceTree = "<group>"; };
 		28A30F9029F84032004C8D68 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 		28A30FC429FEB2D3004C8D68 /* Background */ = {
 			isa = PBXGroup;
 			children = (
-				28A30F8A29F80D4E004C8D68 /* Background.swift */,
 				28A30F9429FA4386004C8D68 /* InfiniteScrollingBackground.swift */,
 				28A30F9229F963ED004C8D68 /* GameBackgroundSpriteableProtocol.swift */,
 			);
@@ -320,7 +317,6 @@
 				28A30F9D29FC1955004C8D68 /* Enemy.swift in Sources */,
 				28A30F9129F84032004C8D68 /* Player.swift in Sources */,
 				28A30F7429F80A42004C8D68 /* AppDelegate.swift in Sources */,
-				28A30F8B29F80D4E004C8D68 /* Background.swift in Sources */,
 				28C235A02A037D2300A1B103 /* PauseScene.swift in Sources */,
 				28A30FB029FD27DA004C8D68 /* Assets.swift in Sources */,
 				28C235A22A0380A300A1B103 /* SceneManager.swift in Sources */,

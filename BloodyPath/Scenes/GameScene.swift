@@ -118,12 +118,6 @@ class GameScene: ParentScene {
     }
     
     fileprivate func configureStartScene() {
-//        let screenCenterPoint = CGPoint(
-//            x: self.size.width / 2,
-//            y: self.size.height / 2)
-//        let bacground = Background.populateBackground(at: screenCenterPoint)
-//        bacground.size = self.size
-//        self.addChild(bacground)
         
         let images = [UIImage(named: "background")!, UIImage(named: "background")!, UIImage(named: "background")!]
         scroller = InfiniteScrollingBackground(images: images, scene: self, scrollDirection: .bottom, transitionSpeed: 8)
