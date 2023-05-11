@@ -252,7 +252,6 @@ extension GameScene: SKPhysicsContactDelegate {
             }
             
             if lives == -1 {
-                
                 gameSettings.currentScore = hud.score
                 gameSettings.saveScores()
                 let transition = SKTransition.doorsCloseVertical(withDuration: 1)
@@ -303,9 +302,7 @@ extension GameScene: SKPhysicsContactDelegate {
 //                    hud.score += 1
 //                }
 //            }
-//            hud.score += 1
-//            contact.bodyA.node?.removeFromParent()
-//            contact.bodyB.node?.removeFromParent()
+
             addChild(explosion!)
             self.run(waitForExplosionAction) {
                 explosion?.removeFromParent()
