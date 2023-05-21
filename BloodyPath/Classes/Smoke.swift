@@ -8,7 +8,6 @@
 import SpriteKit
 import GameplayKit
 
-
 final class Smoke: SKSpriteNode, GameBackgroundSpriteableProtocol {
 
     static func populate(at point: CGPoint?) -> Smoke {

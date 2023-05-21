@@ -120,11 +120,12 @@ class GameScene: ParentScene {
     fileprivate func configureStartScene() {
         
         let images = [UIImage(named: "background")!, UIImage(named: "background")!, UIImage(named: "background")!]
-        scroller = InfiniteScrollingBackground(images: images, scene: self, scrollDirection: .bottom, transitionSpeed: 8)
+        scroller = InfiniteScrollingBackground(images: images, scene: self,
+                                               scrollDirection: .bottom,
+                                               transitionSpeed: 8)
         scroller?.scene.name = "sprite"
         scroller?.scroll()
         scroller?.zPosition = 1
-        
         
         let screen = UIScreen.main.bounds
         
