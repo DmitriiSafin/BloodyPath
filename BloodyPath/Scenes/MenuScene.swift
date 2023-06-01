@@ -15,7 +15,7 @@ class MenuScene: ParentScene {
             Assets.shared.isLoaded = true
         }
         
-        setHeader(withName: "Bloode Path", andBackground: "header_background")
+        setHeader(withName: "Bloody Path", andBackground: "header_background")
         
         let titles = ["play", "options", "best"]
         setButtons(titles: titles)

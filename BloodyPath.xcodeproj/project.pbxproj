@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		2804F3D42A06A56700E368CD /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2804F3D32A06A56700E368CD /* GameOverScene.swift */; };
 		2804F3E22A09407E00E368CD /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2804F3E12A09407E00E368CD /* GameSettings.swift */; };
+		282F86E02A28D71300383F5E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 282F86DF2A28D71300383F5E /* README.md */; };
+		282F86E32A28D87200383F5E /* screen2.png in Resources */ = {isa = PBXBuildFile; fileRef = 282F86E12A28D87200383F5E /* screen2.png */; };
+		282F86E42A28D87200383F5E /* screen1.png in Resources */ = {isa = PBXBuildFile; fileRef = 282F86E22A28D87200383F5E /* screen1.png */; };
+		282F86E62A28DEF500383F5E /* screen3.png in Resources */ = {isa = PBXBuildFile; fileRef = 282F86E52A28DEF500383F5E /* screen3.png */; };
+		282F86E82A28E12B00383F5E /* video.gif in Resources */ = {isa = PBXBuildFile; fileRef = 282F86E72A28E12B00383F5E /* video.gif */; };
 		284AFB332A04FFBB001327EC /* ParentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB322A04FFBB001327EC /* ParentScene.swift */; };
 		284AFB352A050290001327EC /* OptionsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB342A050290001327EC /* OptionsScene.swift */; };
 		284AFB372A050F30001327EC /* BestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB362A050F30001327EC /* BestScene.swift */; };
@@ -49,6 +54,11 @@
 /* Begin PBXFileReference section */
 		2804F3D32A06A56700E368CD /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		2804F3E12A09407E00E368CD /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
+		282F86DF2A28D71300383F5E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		282F86E12A28D87200383F5E /* screen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen2.png; sourceTree = "<group>"; };
+		282F86E22A28D87200383F5E /* screen1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen1.png; sourceTree = "<group>"; };
+		282F86E52A28DEF500383F5E /* screen3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen3.png; sourceTree = "<group>"; };
+		282F86E72A28E12B00383F5E /* video.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = video.gif; sourceTree = "<group>"; };
 		284AFB322A04FFBB001327EC /* ParentScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentScene.swift; sourceTree = "<group>"; };
 		284AFB342A050290001327EC /* OptionsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScene.swift; sourceTree = "<group>"; };
 		284AFB362A050F30001327EC /* BestScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestScene.swift; sourceTree = "<group>"; };
@@ -98,6 +108,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		282F86DE2A28D6FE00383F5E /* ReadmeResources */ = {
+			isa = PBXGroup;
+			children = (
+				282F86E22A28D87200383F5E /* screen1.png */,
+				282F86E12A28D87200383F5E /* screen2.png */,
+				282F86E52A28DEF500383F5E /* screen3.png */,
+				282F86E72A28E12B00383F5E /* video.gif */,
+			);
+			path = ReadmeResources;
+			sourceTree = "<group>";
+		};
 		284AFB3C2A0516B4001327EC /* Particles */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +131,8 @@
 		28A30F6729F80A42004C8D68 = {
 			isa = PBXGroup;
 			children = (
+				282F86DF2A28D71300383F5E /* README.md */,
+				282F86DE2A28D6FE00383F5E /* ReadmeResources */,
 				28A30F7229F80A42004C8D68 /* BloodyPath */,
 				28A30F7129F80A42004C8D68 /* Products */,
 			);
@@ -281,11 +304,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				28A30F9B29FBD799004C8D68 /* GreenPowerUp.atlas in Resources */,
+				282F86E62A28DEF500383F5E /* screen3.png in Resources */,
+				282F86E42A28D87200383F5E /* screen1.png in Resources */,
 				28A30FA929FD232C004C8D68 /* YellowAmmo.atlas in Resources */,
+				282F86E82A28E12B00383F5E /* video.gif in Resources */,
 				284AFB3B2A05166C001327EC /* Assets.xcassets in Resources */,
 				28A30FA329FD1906004C8D68 /* BluePowerUp.atlas in Resources */,
 				28A30FB229FD2A2F004C8D68 /* Player.atlas in Resources */,
 				28A30F7F29F80A42004C8D68 /* Main.storyboard in Resources */,
+				282F86E02A28D71300383F5E /* README.md in Resources */,
+				282F86E32A28D87200383F5E /* screen2.png in Resources */,
 				28A30F8129F80A44004C8D68 /* Assets.xcassets in Resources */,
 				284AFB3A2A05166C001327EC /* EnemyExplosion.sks in Resources */,
 				28A30FA129FCFC3E004C8D68 /* Enemy_2.atlas in Resources */,
